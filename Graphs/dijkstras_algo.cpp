@@ -51,12 +51,10 @@ int main()
     }
     cout << "Adjacency List:" << endl;
     g.printadj();
-    cout << "Topological Sort using DFS:" << endl;
-    unordered_map<int, bool> visited;
-    set<pair<int, int>> s;
     int source;
     cout << "enter source\n";
     cin >> source;
+    set<pair<int, int>> s;
     vector<int> distance(n, INT_MAX);
     distance[source] = 0;
     s.insert({0, source});
